@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IXRay.Packages.LuaJIT</id>
+        <version>2023.08.23-open</version>
+        <title>LuaJIT</title>
+        <authors>acidicMercury8</authors>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <license type="file">COPYRIGHT</license>
+        <readme>README.md</readme>
+        <projectUrl>http://luajit.org</projectUrl>
+        <repository type="git" url="https://github.com/ixray-team/ixray-packages" />
+        <description>LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language</description>
+        <releaseNotes></releaseNotes>
+        <copyright>&#169; 2005-2017 Mike Pall, &#169; 1994-2012 Lua.org, PUC-Rio</copyright>
+        <tags>Native native nativepackage</tags>
+    </metadata>
+
+    <files>
+        <file src="..\..\..\dep\LuaJIT\README.md" target="README.md" />
+        <file src="..\..\..\dep\LuaJIT\COPYRIGHT" target="COPYRIGHT" />
+
+        <file src="..\..\..\dep\LuaJIT\src\*.h" target="native\include\" />
+
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.dll" target="native\bin\x86\" />
+        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.dll" target="native\bin\x64\" />
+
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.lib" target="native\lib\x86\" />
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.exp" target="native\lib\x86\" />
+        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.lib" target="native\lib\x64\" />
+        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.exp" target="native\lib\x64\" />
+
+        <file src="IXRay.Packages.LuaJIT.targets" target="build\native\" />
+    </files>
+</package>
