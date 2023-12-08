@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup Label="Debug" Condition="'$(Configuration.ToLower())' == 'debug'">
+        <NuGetConfiguration>Debug</NuGetConfiguration>
+    </PropertyGroup>
+    <PropertyGroup Label="Non_Debug" Condition="'$(Configuration.ToLower())' == 'release'">
+        <NuGetConfiguration>Release</NuGetConfiguration>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(NuGetConfiguration)' == ''">
+        <NuGetConfiguration>Release</NuGetConfiguration>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Platform)' == 'Win32' Or '$(Platform)' == 'x86'">
+        <NuGetPlatform>Win32</NuGetPlatform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)' == 'x64'">
+        <NuGetPlatform>x64</NuGetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Nvtt-RootPath>$(MSBuildThisFileDirectory)\..\..\native</Nvtt-RootPath>
+        <Nvtt-BinPath>$(Nvtt-RootPath)\bin\$(NuGetPlatform)\$(NuGetConfiguration)\</Nvtt-BinPath>
+        <Nvtt-LibPath>$(Nvtt-RootPath)\lib\$(NuGetPlatform)\$(NuGetConfiguration)\</Nvtt-LibPath>
+    </PropertyGroup>
+
+    <ItemDefinitionGroup>
+        <ClCompile>
+            <AdditionalIncludeDirectories>$(Nvtt-RootPath)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+        </ClCompile>
+
+        <Link>
+            <AdditionalLibraryDirectories>$(Nvtt-LibPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalDependencies>nvtt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+
+    <ItemGroup>
+        <ReferenceCopyLocalPaths Include="$(Nvtt-BinPath)\nvtt.dll" />
+        <ReferenceCopyLocalPaths Include="$(Nvtt-BinPath)\nvtt.pdb" />
+    </ItemGroup>
+</Project>
