@@ -40,6 +40,6 @@
         <file src="..\..\..\dep\castano\nvidia-texture-tools\aeddd65f81d36d8cb7b169b469ef25156666077e\project\vc2017\Release.x64\lib\nvtt.lib" target="native\lib\x64\Release\" />
         <file src="..\..\..\dep\castano\nvidia-texture-tools\aeddd65f81d36d8cb7b169b469ef25156666077e\project\vc2017\Release.x64\lib\nvtt.exp" target="native\lib\x64\Release\" />
 
-        <file src="IXRay.Packages.Nvtt.targets" target="build\native\" />
+        <file src="package.targets" target="build\native\IXRay.Packages.Nvtt.targets" />
     </files>
 </package>

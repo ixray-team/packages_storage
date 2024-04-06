@@ -30,6 +30,6 @@
         <file src="..\..\..\dep\LuaJIT\out\x64\lua51.lib" target="native\lib\x64\" />
         <file src="..\..\..\dep\LuaJIT\out\x64\lua51.exp" target="native\lib\x64\" />
 
-        <file src="IXRay.Packages.LuaJIT.targets" target="build\native\" />
+        <file src="package.targets" target="build\native\IXRay.Packages.LuaJIT.targets" />
     </files>
 </package>

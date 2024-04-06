@@ -61,7 +61,7 @@ function Invoke-Build {
 }
 
 function Invoke-Pack {
-    nuget pack $PSScriptRoot\IXRay.Packages.Nvtt.nuspec -OutputDirectory $Output
+    nuget pack $PSScriptRoot\package.nuspec -OutputDirectory $Output
 }
 
 function Invoke-Actions {
