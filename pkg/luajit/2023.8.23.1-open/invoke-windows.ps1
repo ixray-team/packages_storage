@@ -16,7 +16,7 @@ function Invoke-Build {
 
     New-Item -Name $Destination/out/x86 -ItemType directory
     New-Item -Name $Destination/out/x64 -ItemType directory
-    
+
     & $PSScriptRoot/build-x86.bat
     Move-Item -Path "$Destination/src/*.dll" -Destination "$Destination/out/x86/"
     Move-Item -Path "$Destination/src/*.lib" -Destination "$Destination/out/x86/"
@@ -29,7 +29,11 @@ function Invoke-Build {
 }
 
 function Invoke-Pack {
-    nuget pack $PSScriptRoot\package.nuspec -OutputDirectory $Output
+    nuget pack $PSScriptRoot\metapackage.nuspec -OutputDirectory $Output
+
+    nuget pack $PSScriptRoot\runtimes.nuspec -OutputDirectory $Output
+    nuget pack $PSScriptRoot\runtimes.win-x64.nuspec -OutputDirectory $Output
+    nuget pack $PSScriptRoot\runtimes.win-x86.nuspec -OutputDirectory $Output
 }
 
 function Invoke-Actions {
