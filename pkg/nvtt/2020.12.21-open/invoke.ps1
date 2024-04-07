@@ -70,3 +70,5 @@ function Invoke-Actions {
     Invoke-Build
     Invoke-Pack
 }
+
+Invoke-Actions
