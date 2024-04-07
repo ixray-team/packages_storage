@@ -1,0 +1,12 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Packages"
+        }
+    ],
+    "settings": {
+        "cmake.configureOnOpen": false,
+        "dotnet.defaultSolution": "disable"
+    }
+}
