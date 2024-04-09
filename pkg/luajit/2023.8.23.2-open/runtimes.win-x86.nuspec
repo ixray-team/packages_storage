@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>IXRay.Packages.LuaJIT.Runtimes.win-x64</id>
-        <version>2023.8.23.1-open</version>
+        <id>IXRay.Packages.LuaJIT.Runtimes.win-x86</id>
+        <version>2023.8.23.2-open</version>
         <title>LuaJIT</title>
         <authors>acidicMercury8</authors>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -22,12 +22,12 @@
 
         <file src="..\..\..\dep\LuaJIT\src\*.h" target="build\native\include\" />
 
-        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.dll" target="runtimes\win-x64\native\" />
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.dll" target="runtimes\win-x86\native\" />
 
-        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.lib" target="runtimes\win-x64\native\" />
-        <file src="..\..\..\dep\LuaJIT\out\x64\lua51.exp" target="runtimes\win-x64\native\" />
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.lib" target="runtimes\win-x86\native\" />
+        <file src="..\..\..\dep\LuaJIT\out\x86\lua51.exp" target="runtimes\win-x86\native\" />
 
-        <file src="runtimes.win-x64.targets" target="build\native\IXRay.Packages.LuaJIT.targets" />
-        <file src="runtimes.win-x64.cmake" target="build\native\IXRay.Packages.LuaJIT.cmake" />
+        <file src="runtimes.win-x86.targets" target="build\native\IXRay.Packages.LuaJIT.Runtimes.win-x86.targets" />
+        <file src="runtimes.win-x86.cmake" target="build\native\IXRay.Packages.LuaJIT.Runtimes.win-x86.cmake" />
     </files>
 </package>

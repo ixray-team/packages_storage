@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>IXRay.Packages.LuaJIT.Runtimes.osx-arm64</id>
-        <version>2023.8.23.1-open</version>
+        <id>IXRay.Packages.LuaJIT.Runtimes</id>
+        <version>2023.8.23.2-open</version>
         <title>LuaJIT</title>
         <authors>acidicMercury8</authors>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -14,17 +14,21 @@
         <releaseNotes></releaseNotes>
         <copyright>&#169; 2005-2017 Mike Pall, &#169; 1994-2012 Lua.org, PUC-Rio</copyright>
         <tags>Native native nativepackage</tags>
+
+        <dependencies>
+            <group targetFramework="native">
+                <dependency id="IXRay.Packages.LuaJIT.Runtimes.win-x86" version="2023.8.23.2-open" />
+                <dependency id="IXRay.Packages.LuaJIT.Runtimes.win-x64" version="2023.8.23.2-open" />
+
+                <dependency id="IXRay.Packages.LuaJIT.Runtimes.linux-x64" version="2023.8.23.2-open" />
+
+                <dependency id="IXRay.Packages.LuaJIT.Runtimes.osx-arm64" version="2023.8.23.2-open" />
+            </group>
+        </dependencies>
     </metadata>
 
     <files>
         <file src="..\..\..\dep\LuaJIT\README.md" target="README.md" />
         <file src="..\..\..\dep\LuaJIT\COPYRIGHT" target="COPYRIGHT" />
-
-        <file src="..\..\..\dep\LuaJIT\src\*.h" target="build\native\include\" />
-
-        <file src="..\..\..\dep\LuaJIT\src\libluajit.dylib" target="runtimes\osx-arm64\native\" />
-
-        <file src="runtimes.osx-arm64.targets" target="build\native\IXRay.Packages.LuaJIT.targets" />
-        <file src="runtimes.osx-arm64.cmake" target="build\native\IXRay.Packages.LuaJIT.cmake" />
     </files>
 </package>

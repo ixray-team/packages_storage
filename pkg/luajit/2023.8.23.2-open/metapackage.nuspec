@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>IXRay.Packages.LuaJIT.Runtimes</id>
-        <version>2023.8.23.1-open</version>
+        <id>IXRay.Packages.LuaJIT</id>
+        <version>2023.8.23.2-open</version>
         <title>LuaJIT</title>
         <authors>acidicMercury8</authors>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -17,12 +17,7 @@
 
         <dependencies>
             <group targetFramework="native">
-                <dependency id="IXRay.Packages.LuaJIT.Runtimes.win-x86" version="2023.8.23.1-open" />
-                <dependency id="IXRay.Packages.LuaJIT.Runtimes.win-x64" version="2023.8.23.1-open" />
-
-                <dependency id="IXRay.Packages.LuaJIT.Runtimes.linux-x64" version="2023.8.23.1-open" />
-
-                <dependency id="IXRay.Packages.LuaJIT.Runtimes.osx-arm64" version="2023.8.23.1-open" />
+                <dependency id="IXRay.Packages.LuaJIT.Runtimes" version="2023.8.23.2-open" />
             </group>
         </dependencies>
     </metadata>

@@ -1,7 +1,7 @@
 set(LUAJIT_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../..")
-set(LUAJIT_RUNTIME_ID "win-x64")
-set(LUAJIT_RUNTIME_PATH "${ONETBB_ROOT_PATH}/runtimes/${LUAJIT_RUNTIME_ID}/native/")
-set(LUAJIT_INCLUDE_PATH "${ONETBB_ROOT_PATH}/build/native/include/")
+set(LUAJIT_RUNTIME_ID "win-x86")
+set(LUAJIT_RUNTIME_PATH "${LUAJIT_ROOT_PATH}/runtimes/${LUAJIT_RUNTIME_ID}/native/")
+set(LUAJIT_INCLUDE_PATH "${LUAJIT_ROOT_PATH}/build/native/include/")
 
 target_include_directories(${PROJECT_NAME} PRIVATE "${LUAJIT_INCLUDE_PATH}")
 target_link_directories(${PROJECT_NAME} PRIVATE "${LUAJIT_RUNTIME_PATH}")
