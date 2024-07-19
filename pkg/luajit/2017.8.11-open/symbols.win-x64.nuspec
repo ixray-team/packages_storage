@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>IXRay.Packages.LuaJIT.Symbols.win-x64</id>
+        <version>2017.8.11-open</version>
+        <title>LuaJIT</title>
+        <authors>acidicMercury8</authors>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <license type="file">COPYRIGHT</license>
+        <readme>README.md</readme>
+        <projectUrl>http://luajit.org</projectUrl>
+        <repository type="git" url="https://github.com/ixray-team/ixray-packages" />
+        <description>LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language</description>
+        <releaseNotes>Applied extended memory pool patch
+```c
+#define CHUNK_SIZE (128 * 1024)
+#define CHUNK_COUNT 1024
+```</releaseNotes>
+        <copyright>&#169; 2005-2017 Mike Pall, &#169; 1994-2012 Lua.org, PUC-Rio</copyright>
+        <tags>Native native nativepackage</tags>
+    </metadata>
+
+    <files>
+        <file src="..\..\..\dep\abramcumner\xray16\3rd party\luajit\README.md" target="README.md" />
+        <file src="..\..\..\dep\abramcumner\xray16\3rd party\luajit\COPYRIGHT" target="COPYRIGHT" />
+
+        <file src="..\..\..\dep\abramcumner\xray16\3rd party\luajit\out\x64\Debug\lua51.pdb" target="runtimes\win-x64\native\Debug\" />
+
+        <file src="symbols.win-x64.targets" target="build\native\IXRay.Packages.LuaJIT.Symbols.win-x64.targets" />
+        <file src="symbols.win-x64.cmake" target="build\native\IXRay.Packages.LuaJIT.Symbols.win-x64.cmake" />
+    </files>
+</package>
